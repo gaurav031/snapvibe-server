@@ -14,9 +14,6 @@ import postRoutes from "./routes/posts.js";
 import { register } from "./controllers/auth.js";
 import { createPost } from "./controllers/posts.js";
 import { verifyToken } from "./middleware/auth.js";
-import User from "./models/User.js";
-import Post from "./models/Post.js";
-import { users, posts } from "./data/index.js";
 
 /* CONFIGURATIONS */
 const __filename = fileURLToPath(import.meta.url);
@@ -35,7 +32,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 
 /* CORS CONFIGURATION */
 app.use(cors({
-  origin: "https://snap-vibe.netlify.app/", // Replace '*' with specific origins if needed
+  origin: "https://snap-vibe.netlify.app/ ", // Replace '*' with specific origins if needed
   methods: "GET,POST,PUT,DELETE",
   credentials: true, // Allow credentials such as cookies
 }));
